@@ -6,8 +6,7 @@
 	<link rel="stylesheet" href="fonts/stylesheet.css">
    <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-   />
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
    <link rel="stylesheet" href="css/default.css">
    <link rel="stylesheet" href="css/styles.css">
 	<title>Services</title>
@@ -18,8 +17,8 @@
    </div>
    <!--Mobile-->
    <div class="main-logo-container">
-      <div class="swiper-container logos-swiper">
-         <div class="logos swiper-wrapper">
+      <div class="swiper-container logos-swiper logos-swiper--not-mobile">
+         <div class="logos swiper-wrapper" id="logos">
             <div class="logos__logo swiper-slide">
                <img class="logos__brand" src="./img/lenovo.png" alt="Lenovo">
                <div class="logos__icon icon"></div>
@@ -68,7 +67,7 @@
          <div class="swiper-pagination logos__bullets"></div>
       </div>
       <!--Tablet&Desctope-->
-      <div class="logos-swiper logos-swiper--not-mobile">
+      <!--<div class="logos-swiper logos-swiper--not-mobile">
          <div class="logos" id="logos">
             <div class="logos__logo">
                <img class="logos__brand" src="./img/lenovo.png" alt="Lenovo">
@@ -112,10 +111,10 @@
             </div>
             <div class="logos__logo">
                <img class="logos__brand" src="./img/apple.png" alt="Apple">
-               <div href="#" class="logos__icon icon"></div>
+               <a href="#" class="logos__icon icon"></a>
             </div>
          </div>
-      </div>
+      </div>-->
       <button type="button" class="read-more" id="readmore">Показать всё</button>
    </div>
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

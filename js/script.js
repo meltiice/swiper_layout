@@ -11,7 +11,7 @@ readmore.addEventListener('click', function (e) {
       readmore.innerHTML = "Показать всё";
    }
 });
-new Swiper('.logos-swiper', {
+new Swiper('.swiper-container', {
    pagination: {
       el: '.swiper-pagination',
       clickable: true

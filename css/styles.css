@@ -1,0 +1,199 @@
+/*colors:  
+#FFFFFF - white background
+#F8F8F8 - gray background
+#1B1C21 - text color black
+#7E7E82 - text color gray
+#B8FFEC - focus border green
+#41F6D7 - bright green for icons
+#FF3E79 - pink for icons
+Блок должен быть шириной 320 пикселей 
+и фиксироваться в левой части экрана 
+независимо от размера экрана. 
+При наведении стиль кнопок плавно меняется,
+возьмите для этого какой-нибудь css filter
+ или opacity.*/
+ ::-webkit-scrollbar {
+   width: 0;
+ }
+.screen1__scroll::-moz-scrollbar
+{
+width: 0px;
+height: 0px;
+}
+html {
+   -ms-overflow-style: none;
+   overflow-y: scroll;
+   scrollbar-width: none;
+}
+.subtitle {
+   font-size: 16px;
+   font-weight: 500;
+   color: #7E7E82;
+   line-height: 24px;
+}
+.icon {
+   min-width: 40px;
+   min-height: 40px;
+   border-radius: 50%;
+   background: #FF3E79 no-repeat 50% 50%;
+   cursor: pointer;
+}
+.header-logo {
+   padding: 16px;
+   background-color: white;
+}
+.header__subtitle {
+   text-transform: uppercase;
+   font-weight: 400;
+}
+.main-logo-container {
+   padding: 24px 16px 24px 16px;
+   background-color: #F8F8F8;
+   height: 170px;
+   position: relative;
+}
+.logos-swiper {
+   width: 256px;
+}
+.logos-swiper::after {
+   content: "";
+   width: 24px;
+   height: 74px;
+   background: linear-gradient(to right, transparent, #F8F8F8);
+   position: absolute;
+   z-index: 1;
+   right: 0;
+   top: 24px;
+}
+.logos__brand {
+   display: inline-block;
+}
+.logos__icon {
+   box-shadow: inset 0 0 0 2px #FF3E79;
+   background-color: transparent;
+   background-image: url("../img/dropdown.png");
+   background-position: 53% 50%;
+   background-size: 7.5px 12px;
+   transform: scale(1);
+   transition: transform 1s;
+}
+.logos__icon:hover {
+   transform: scale(1.1);
+   transition: transform 1s;
+}
+
+.logos__logo {
+   max-width: 240px;
+   max-height: 72px;
+   min-width: 240px;
+   min-height: 72px;
+   width: 240px;
+   height: 72px;
+   margin-right: 16px;
+   background-color: white;
+   border: 1px solid #EAEAEA;
+   border-radius: 6px;
+   padding: 16px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-sizing: border-box;
+}
+.swiper-pagination {
+   padding: 0;
+   margin: 0;
+}
+.swiper-pagination-bullet {
+   background-color: #7E7E82;
+   width: 12px;
+   height: 12px;
+}
+.swiper-slide {
+   padding: 0 16px;
+}
+.swiper-pagination.logos__bullets {
+   margin: 0 auto;
+   top: 120px;
+}
+.logos-swiper--not-mobile {
+   display: none;
+}
+.read-more {
+   display: none;
+}
+@media (min-width:768px) {
+   .main-logo-container {
+      width: auto;
+      height: auto;
+   }
+   .logos-swiper {
+      display: none;
+   }
+   .logos-swiper::after {
+      display: none;
+   }
+   .logos-swiper--not-mobile {
+      display: block;
+      width: 100%;
+   }
+   .logos {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      row-gap: 16px;
+      column-gap: 24px;
+      max-height: 168px;
+      overflow: hidden;
+      transition: max-height 1s ease-out;
+   }
+   .open-content--show {
+      max-height: 340px;
+   }
+   .logos__logo {
+      margin: 0;
+      width: calc(100% / 3 - 16px);
+      max-width: none;
+      max-height: none;
+      min-width: 0;
+      min-height: 0;
+   }
+   .read-more {
+      font-size: 16px;
+      display: flex;
+      width: 140px;
+      height: 24px;
+      margin: 16px 0 16px 16px;
+      align-items: center;
+      font-weight: 400;
+      background: none;
+      transition: 1s ease-out max-height;
+   }
+   .read-more::before {
+      content: url("../img/expand.svg");
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      transform: rotate(0);
+      transition: 0.3s ease-out transform;
+   }
+   .read-more-rotate::before {
+      transform: rotate(180deg);
+   }
+}
+@media (min-width:1120px) {
+   .logos__logo {
+      width: calc(100% / 4 - 18px);
+   }
+   .open-content--show {
+      max-height: 340px;
+   }
+   .read-more {
+      transition-duration: 0.8s;
+   }
+   .read-more-rotate::before {
+      transition-duration: 0.3s;
+   }
+   .logos{
+      transition-duration: 0.8s;
+   }
+}

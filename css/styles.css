@@ -51,6 +51,8 @@ html {
    background-color: #F8F8F8;
    height: 170px;
    position: relative;
+   width: 100vw;
+   overflow: hidden;
 }
 .logos-swiper {
    width: 256px;

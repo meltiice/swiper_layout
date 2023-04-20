@@ -128,10 +128,18 @@ html {
    .swiper-pagination.logos__bullets {
       display: none;
    }
+   .logos-swiper::after {
+      display: none;
+   }
+   .swiper-container {
+      display: none;
+   }
    .logos-swiper--not-mobile {
+      display: block;
       width: 100%;
    }
    .logos {
+      display: flex;
       flex-wrap: wrap;
       width: 100%;
       row-gap: 16px;
